@@ -1,0 +1,94 @@
+git config --global http.proxy http://sjc1intproxy01.crd.ge.com:8080/
+git config --global https.proxy http://sjc1intproxy01.crd.ge.com:8080/
+git config --global url."https://github.com".insteadOf git://github.com
+git config --global url."git@github.build.ge.com:".insteadOf "https://github.build.ge.com/"
+
+
+
+git init
+git add "index.html"
+git status
+git commit -m "Test html file"
+git status
+git push
+
+-----------------
+
+You can create an empty repository in github. Then instead of clone, you can use git init in your local directory to make it a git repo. 
+To connect it with the remote repository in github, you can use the git remote add origin git@github.build.ge.com:xxx/your_repo.git 
+where xxx is your SSO or github organization and your_repo is the name of the repository you created. Then you can use the 
+typical git add/git commit/git push commands to update your git repository.
+
+In fact you can use the git remote add command to add multiple remotes like other forks of a github repository. This can be helpful 
+if several people fork a repo and you want to share changes with each other before committing back to an org copy of the repository.
+
+-------------------
+
+
+
+Deb, Brijesh (GE Aviation)  –February 16 at 11:22am 
+See if this helps: Resource server (https://github.build.ge.com/212393369/SecuredPredixBackEndService.git) 
+and Client ( https://github.build.ge.com/212393369/SecuredPredixBackEndServiceClient.git) to access it.
+
+
+
+https://shared-uaa-select.run.asv-pr.ice.predix.io/#/admin
+
+https://cloud.spring.io/spring-cloud-security/
+
+https://github.com/spring-cloud-samples/sso
+
+https://github.build.ge.com/SharedUAA/Predix-Shared-UAA/wiki
+
+
+
+-----------------------------------------------------------------
+
+to push your project to git repo without cloning the repo
+
+
+https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+
+git status
+git add .
+git status
+git commit -m "Initial Commit"
+git status
+git remote add origin https://github.build.ge.com/212595357/wcm-target-services.git
+git remote -v
+git status
+git fetch origin
+git pull --rebase origin master
+git staus
+git push origin master
+git status
+
+
+
+
+to checkout different branch
+--------------------------------
+
+git stash list  - to see the stash list
+git stash clear  - to clear the stash list
+git stash list
+
+
+git fetch origin
+git checkout wcmCostModel-MVP2
+git pull --rebase origin wcmCostModel-MVP2
+-----------------------------------------------
+
+git status
+git stash list
+git stash clear or git checkout .
+git status
+git fetch origin --> this will bring all the changes from remote to local
+then checkout :
+git checkout angular-gulp-userlogin
+git status
+git pull --rebase origin angular-gulp-userlogin
+git status
+
+
+
